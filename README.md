@@ -1,3 +1,2 @@
-# UFAL
-Conteúdo/exercícios de Ciência da Computação - UFAL
- 
+# UFAL 
+Conteúdo de programação visto na UFAL
