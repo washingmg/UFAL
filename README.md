@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 # UFAL 
-Conteúdo de programação visto na UFALConteúdo de programação visto na faculdade - UFAL
 Conteúdo de programação visto na UFAL
 =======
 # UFAL
