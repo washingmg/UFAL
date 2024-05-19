@@ -17,20 +17,14 @@ else:
     print('Não ocorrem em sequência')
 
 print('='*50)
-lista = [1,3,5,8,6,7,4] #1° criamos uma lista com os n°
-n1 = 5 #2° criamoas as variáveis que queremos verificar
+lista = [1,3,5,8,6,7,4] 
+n1 = 5 
 n2 = 8
 
-existe = False #5° crimaos como falso para caso não encontre a sequência, dê  como falso
-for i in range(len(lista)): #3° para o elemento i percorer o tamanho da lista menos o último
-    #Foi usado o range pq ele vai tranformar N° total de índices em um tamanho
-    #Como usamos um for, que é um loop, ele repetirá o tamnho da lista várias vez7
-    #Usamos o -1 para que o 0 não conto e fique mais fácil de se ter algo exato
-    if n1 == lista[i] and n2 == lista[i+1]: #4° se n1 for igual a lista[i] e n2 for igual a lista[i + 2]
-    
-    # o lista[i] serve para verificar o valor que está no índice
-    # o lista[i + 1] serve para ver se o valor ocorre logo em sequência
-        existe = True #5° cramos essa variável como vdd para dizer que ocorre a sequência
+existe = False 
+for i in range(len(lista)):
+    if n1 == lista[i] and n2 == lista[i+1]: 
+        existe = True 
 if existe == True:
     print("Existe em sequência na lista")
 else:
