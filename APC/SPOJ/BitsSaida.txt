@@ -1,0 +1,30 @@
+Teste 1
+0 0 0 1
+
+Teste 2
+1 2 0 2
+
+Teste 3
+2 0 0 0
+
+Teste 4
+1 0 0 0
+
+Teste 5
+1 0 0 2
+
+Teste 6
+3 0 0 2
+
+Teste 7
+4 0 0 0
+
+Teste 8
+20 0 0 0
+
+Teste 9
+40 0 0 0
+
+Teste 10
+0 1 0 0
+
