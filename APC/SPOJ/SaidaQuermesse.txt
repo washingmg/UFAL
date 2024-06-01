@@ -1,0 +1,8 @@
+Teste 1
+3
+Teste 2
+10
+Teste 3
+5
+Teste 4
+1
