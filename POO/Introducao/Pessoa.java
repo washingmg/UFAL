@@ -1,4 +1,4 @@
-package POO.Introducao;
+package Introducao;
 
 public class Pessoa {
     public String nome;
@@ -18,6 +18,7 @@ public class Pessoa {
         System.out.println(frase + " Eu sou "+ this.nome);
     }
     
+  
     public static void main(String[] args){
         System.out.println("Iniciando o programa...");
         
@@ -34,6 +35,5 @@ public class Pessoa {
         
         String endereco = new String("Meu endereco");
         System.out.println(endereco.length());
-    
     }
 }
