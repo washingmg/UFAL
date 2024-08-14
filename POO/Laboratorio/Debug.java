@@ -1,4 +1,4 @@
-package Exercicio;
+package Laboratorio;
 
 public class Debug {
     
