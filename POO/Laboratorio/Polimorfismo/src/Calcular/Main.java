@@ -45,7 +45,7 @@ public class Main {
                         operacao = new Divisao();
                         break;
                 }
-                operacao.calcular(num1, num2);
+                operacao.calcular(num1, num2); // se Digitou D, a operação será realizada na classe divisao, que está instaciado na operação
             }
         }
         scanner.close();
