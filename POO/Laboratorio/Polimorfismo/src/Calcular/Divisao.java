@@ -8,11 +8,11 @@ public class Divisao extends Operacao {
 
         if (num2 != 0) {
             valor = (num1 / num2);
-            System.out.println("Você dividiu " + num1 + " / " + num2);
-            System.out.println("Resultando em: "+ valor);
+            this.mostrar("Você dividiu " + num1 + " / " + num2);
+            this.mostrar("Resultando em: "+ valor);
         } else {
-            System.out.println("Você dividiu " + num1 + " / "+ num2);
-            System.out.println("Impossível dividir por 0.");
+            this.mostrar("Você dividiu " + num1 + " / "+ num2);
+            this.mostrar("Impossível dividir por 0.");
         }
     }
 }

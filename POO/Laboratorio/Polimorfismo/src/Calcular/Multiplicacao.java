@@ -7,7 +7,7 @@ public class Multiplicacao extends Operacao{
         float valor;
         
         valor = num1 * num2;
-        System.out.println("Você multiplicou " + num1 + " * "+ num2);
-        System.out.println("Resultando em: "+ valor);
+        this.mostrar("Você multiplicou " + num1 + " * "+ num2);
+        this.mostrar("Resultando em: "+ valor);
     }
 }
