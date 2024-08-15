@@ -10,9 +10,11 @@ public class Principal {
 
         // c1.marca = "GM"; variável privada n é acessível sem o uso de métodos.
         c1.setMarca("G");
-        
         c1.mostrar();
         
+        Carro c2 = new Carro("AAA-111", "Voyage","Volkswagen");
+        
+        c2.mostrar();
 
     }
 }

@@ -5,6 +5,17 @@ public class Carro {
     private String modelo;
     private String marca;
 
+    public Carro() {
+        //Padrão, sem parâmetros
+    };
+
+    //Evita o uso de sets
+    public Carro(String placa, String modelo, String marca) {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.marca = marca;
+    }
+
     public String getPlaca() {
         return this.placa;
     }
@@ -34,5 +45,6 @@ public class Carro {
         System.out.println("Placa = " +this.getPlaca());
         System.out.println("Marca = "+this.getMarca());
         System.out.println("Modelo = "+this.getModelo());
+        System.out.println();
     }
 }
