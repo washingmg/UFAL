@@ -1,5 +1,7 @@
 package Encapsulamento.src.aula1.poo;
 
+import Encapsulamento.src.aula2.poo.pacote1.Motorista;
+
 public class Carro {
     protected String placa;
     private String modelo;
@@ -50,5 +52,10 @@ public class Carro {
     @Override
     public String toString() {
         return "Print do objeto Carro modificado!, classe object do java";
+    }
+
+    public void setMotorista(Motorista joao) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setMotorista'");
     }
 }
