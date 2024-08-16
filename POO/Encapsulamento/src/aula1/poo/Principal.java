@@ -1,4 +1,4 @@
-package Encapsulamento.src.aula.poo;
+package Encapsulamento.src.aula1.poo;
 
 public class Principal {
     public static void main(String[] args) {

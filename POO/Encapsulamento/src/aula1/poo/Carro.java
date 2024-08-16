@@ -1,4 +1,4 @@
-package Encapsulamento.src.aula.poo;
+package Encapsulamento.src.aula1.poo;
 
 public class Carro {
     protected String placa;
