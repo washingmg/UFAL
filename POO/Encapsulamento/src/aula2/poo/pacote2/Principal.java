@@ -1,12 +1,12 @@
 package Encapsulamento.src.aula2.poo.pacote2;
 
-import Encapsulamento.src.aula2.poo.pacote1.Carro;
+// import Encapsulamento.src.aula2.poo.pacote1.Carro;
 import Encapsulamento.src.aula2.poo.pacote1.Motorista;
 
 public class Principal {
     public static void main(String[] args) {
-        Carro c1 = new CarroEletrico("ABC-1234", "Uno", "FIAT");
-        Carro c2 = new CarroCombustao("AAA-1111", "Gol", "VW");
+        CarroEletrico c1 = new CarroEletrico("ABC-1234", "Uno", "FIAT");
+        CarroCombustao c2 = new CarroCombustao("AAA-1111", "Gol", "VW");
 
         c1.mostrar();
         System.out.println(c1);
