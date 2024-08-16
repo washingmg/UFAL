@@ -15,6 +15,7 @@ public class Principal {
         Carro c2 = new Carro("AAA-111", "Voyage","Volkswagen");
         
         c2.mostrar();
+        System.out.println(c2);
 
     }
 }

@@ -1,7 +1,7 @@
 package Encapsulamento.src.aula.poo;
 
 public class Carro {
-    private String placa;
+    protected String placa;
     private String modelo;
     private String marca;
 
@@ -46,5 +46,9 @@ public class Carro {
         System.out.println("Marca = "+this.getMarca());
         System.out.println("Modelo = "+this.getModelo());
         System.out.println();
+    }
+    @Override
+    public String toString() {
+        return "Print do objeto Carro modificado!, classe object do java";
     }
 }
