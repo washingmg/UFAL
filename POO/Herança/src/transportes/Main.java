@@ -11,12 +11,19 @@ public class Main {
     carro.acelerar();
     trem.acelerar();
     
+    //Subclasse
     carro.desacelerar();
     trem.desacelerar();
 
     //Superclasse
     carro.registrar();
     trem.registrar();
-    
+
+    carro.herdar();
+    trem.herdar();
+
+    //Subclasse
+    carro.mostrar();
+    trem.mostrar();
     }
 }

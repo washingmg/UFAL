@@ -16,10 +16,12 @@ public class Trem extends Transporte {
         this.quantidadeDeVagoes = quantidadeDeVagoes;
     }
     
+    @Override
     public void acelerar() {
         System.out.println("Acelerando Trem...");
     }
 
+    @Override
     public void desacelerar() {
         System.out.println("Desacelerando Trem...");
     }
