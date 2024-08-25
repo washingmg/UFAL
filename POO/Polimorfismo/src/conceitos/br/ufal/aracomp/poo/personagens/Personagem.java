@@ -1,4 +1,4 @@
-package conceitos.personagens;
+package conceitos.br.ufal.aracomp.poo.personagens;
 
 public class Personagem {
 
