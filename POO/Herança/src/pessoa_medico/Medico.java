@@ -16,6 +16,11 @@ public class Medico extends Pessoa {
         this.matricula = matricula;
     }
 
+    // Método específico da classe Medico
+    public void realizarCirurgia() {
+        System.out.println("Realizando cirurgia...");
+    }
+    
     @Override
     public void mostrar() {
         super.mostrar();

@@ -8,7 +8,6 @@ public class Pessoa {
         this.nome = nome;
         this.idade = idade;
     }
-
     public String getNome() {
         return nome;
     }
@@ -16,7 +15,7 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    
     public int getIdade() {
         return idade;
     }
@@ -26,6 +25,7 @@ public class Pessoa {
     }
 
     public void mostrar() {
-        System.out.println("Nome: " + getNome() + ", Idade: " + getIdade());
+        System.out.println("A pessoa " + getNome() + " com idade " + getIdade());
+        
     }
 }
