@@ -1,4 +1,4 @@
-package conceitos.br.ufal.aracomp.poo.personagens;
+package conceitos.personagens;
 
 public class Jovem {
 
