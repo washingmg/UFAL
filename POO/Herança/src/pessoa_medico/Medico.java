@@ -24,6 +24,6 @@ public class Medico extends Pessoa {
     @Override
     public void mostrar() {
         super.mostrar();
-        System.out.println("Matrícula: " + getMatricula() + " é um médico.");
+        System.out.println("Matrícula: " + getMatricula() + " é um médico!");
     }
 }

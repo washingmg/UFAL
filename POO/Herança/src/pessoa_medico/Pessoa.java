@@ -26,6 +26,5 @@ public class Pessoa {
 
     public void mostrar() {
         System.out.println("A pessoa " + getNome() + " com idade " + getIdade());
-        
     }
 }

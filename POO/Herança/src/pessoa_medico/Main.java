@@ -17,7 +17,6 @@ public class Main {
         //Como o tipo é Pessoa, só consegue acessar os métodos de Pessoa, mas o que é executado é a classe da instância
         Pessoa estagiario = new Medico("Maria Oliveira", 45, 12345);
         estagiario.mostrar();
-        
     }
 }
 
