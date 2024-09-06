@@ -1,7 +1,8 @@
 package br.ufal.aracomp.poo.operacoes;
 
 
-public class Adicao extends Operacao{
+public class Adicao implements Operacao{
+	private Visual visual = new Visual();
 	private int codigo;
 	
 	public Adicao(int codigo) {
@@ -11,11 +12,17 @@ public class Adicao extends Operacao{
 	public Adicao() {
 		this.codigo = 0;
 	}
-
+	
 	@Override
 	public void calcular(float num1, float num2) {
-		this.mostrar(num1 + " + " + num2 + " = " + (num1+num2));
+		this.visual.mostrar(num1 + " + " + num2 + " = " + (num1+num2));
 	}
+	
+	public void calcular(float num1, float num2, float num3) {
+		this.visual.mostrar(num1 + " + " + num2 + " + " + num3 + " = " + (num1+num2+num3));
+	}
+
+	
 	
 	@Override
 	public boolean equals(Object obj) {

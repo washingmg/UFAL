@@ -1,19 +1,13 @@
 package br.ufal.aracomp.poo.operacoes;
 
-
 public class Principal2 {
+	
 	public static void main(String[] args) {
-		Operacao op = new Subtracao();
+		Operacao o = new Adicao();
 		
-		if(op instanceof Adicao)
-			System.out.println("ADICAO!");
-		else if(op instanceof Subtracao)
-			System.out.println("SUBTRAÇÃO!");
-		else if(op instanceof Multiplicacao)
-			System.out.println("MULTIPLICAÇÃO!");
-		else if(op instanceof Divisao)
-			System.out.println("DIVISÃO!");
-		
-		op.calcular(2, 3);
+		if(o instanceof Adicao)
+			((Adicao)o).calcular(2, 5, 3);
+		else
+			System.out.println("Operação imcompatível!");
 	}
 }

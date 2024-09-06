@@ -1,11 +1,12 @@
 package br.ufal.aracomp.poo.operacoes;
 
 
-public class Multiplicacao extends Operacao{
+public class Multiplicacao implements Operacao{
+	Visual visual = new Visual();
 
 	@Override
 	public void calcular(float num1, float num2) {
-		this.mostrar(num1 + " x " + num2 + " = " + (num1*num2));
+		this.visual.mostrar(num1 + " x " + num2 + " = " + (num1*num2));
 	}
 	
 	@Override
