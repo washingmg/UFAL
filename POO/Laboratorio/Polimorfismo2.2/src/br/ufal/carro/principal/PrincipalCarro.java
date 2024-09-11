@@ -22,6 +22,7 @@ public class PrincipalCarro {
         carroDiesel.abastecer(40);
         carroDiesel.ligar();
         carroDiesel.acelerar(10); 
+        carroDiesel.freiar();
 		// carroDiesel.desligar();
 
     }

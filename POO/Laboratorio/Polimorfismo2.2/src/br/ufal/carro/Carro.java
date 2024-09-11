@@ -43,11 +43,11 @@ public class Carro {
                 if (tanque.getQuantidadePresente() == 0) {
                     System.out.println("Faltou combustível :/.");
                     desligar(); 
+                    }
+                } else {
+                    motor.desligar();
                 }
-            } else {
-                motor.desligar();
             }
-        } else System.out.println("Motor desligado!");
         }
 
     public void freiar() {
