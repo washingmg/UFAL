@@ -17,33 +17,38 @@ public class Carro {
     }
 
     public void ligar() {
-		if (tanque.getQuantidadePresente() > 0) {
-			motor.ligar();
-			System.out.println("O carro " + modelo +  " de cor " + cor + " foi ligado.");
-		} else System.out.println("Sem combustível para ligar!");
-        
+		if (!motor.isLigado()) {
+            if (tanque.getQuantidadePresente() > 0) {
+                motor.ligar();
+                System.out.println("O carro " + modelo +  " de cor " + cor + " foi ligado.");
+            } else System.out.println("Sem combustível para ligar!");
+        } else System.out.println("Motor já ligado!");
     }
 
     public void desligar() {
-        if (getVelocidade() > 0) {
-            this.freiar();
-        }
-        motor.desligar();
-        System.out.println("O carro " + modelo +  " de cor " + cor + " foi desligado.");
-    }
+        if (motor.isLigado()) {
+            if (getVelocidade() > 0) {
+                this.freiar();
+            }
+                motor.desligar();
+                System.out.println("O carro " + modelo +  " de cor " + cor + " foi desligado.");
+            } else System.out.println("Já desligado!");
+        } 
 
     public void acelerar(int quantCombustivel) {
         int combustivelDisponivel = tanque.usarCombustivel(quantCombustivel);
-        if (combustivelDisponivel > 0) {
-            motor.acelerar(this, combustivelDisponivel);
-            if (tanque.getQuantidadePresente() == 0) {
-				System.out.println("Faltou combustível :/.");
-				desligar(); 
+        if (motor.isLigado()) {
+            if (combustivelDisponivel > 0) {
+                motor.acelerar(this, combustivelDisponivel);
+                if (tanque.getQuantidadePresente() == 0) {
+                    System.out.println("Faltou combustível :/.");
+                    desligar(); 
+                }
+            } else {
+                motor.desligar();
             }
-        } else {
-			motor.desligar();
+        } else System.out.println("Motor desligado!");
         }
-    }
 
     public void freiar() {
         velocidade = 0;
