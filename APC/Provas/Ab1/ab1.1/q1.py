@@ -1,14 +1,15 @@
-def calcular_salario(total_horas, salario_hora):
-    horas_extras = 0
-    if total_horas > 40:
-        horas_extras = total_horas - 40
-        total_horas = 40
-    salario_base = total_horas * salario_hora
+
+total_horas = float(input("Digite o número de horas trabalhadas na semana: "))
+salario_hora = float(input("Digite o salário por hora: "))
+
+if total_horas > 40:
+    horas_extras = total_horas - 40
+    salario_base = 40 * salario_hora
     salario_extras = horas_extras * salario_hora * 1.5
-    return salario_base + salario_extras
+else:
+    horas_extras = 0
+    salario_base = total_horas * salario_hora
+    salario_extras = 0
 
-horas_trabalhadas = int(input('digite número de horas trabalhadas: '))
-salario_por_hora = int(input('digite valor da hora de trabalho: '))
-
-salario_total = calcular_salario(horas_trabalhadas, salario_por_hora)
+salario_total = salario_base + salario_extras
 print(f"Salário total na semana: R${salario_total:.2f}")
