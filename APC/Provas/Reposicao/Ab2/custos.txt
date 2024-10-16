@@ -1,0 +1,8 @@
+administrativo 20000
+vendas 15000
+TI 10000
+logística 45000
+RH 15000
+limpeza 5000
+manutenção 20000
+fábrica 80000
