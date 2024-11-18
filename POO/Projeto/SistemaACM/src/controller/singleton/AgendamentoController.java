@@ -13,13 +13,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AgendaController implements IAgenda {
-    private static AgendaController instance;
+public class AgendamentoController implements IAgenda {
+    private static AgendamentoController instance;
     private List<Medico> medicos;
     private List<Paciente> pacientes;
     private List<String> agendamentos;
 
-    private AgendaController() {
+    private AgendamentoController() {
         medicos = new ArrayList<>();
         pacientes = new ArrayList<>();
         agendamentos = new ArrayList<>();
@@ -48,9 +48,9 @@ public class AgendaController implements IAgenda {
         // Chamadas para adicionar médicos
         adicionarMedico("Dr. Silva", "11111111111", "Cardiologia", 300, diasEHorariosDrSilva);
         adicionarMedico("Dr. Costa", "22222222222", "Dermatologia", 250, diasEHorariosDrCosta);
-        adicionarMedico("Dr. Oliveira", "33333333333", "Ortopedia", 200, diasEHorariosDrOliveira);
+        adicionarMedico("Dr. Oliveira", "33333333333", "Ortopedia", 400, diasEHorariosDrOliveira);
         adicionarMedico("Dr. Santos", "44444444444", "Pediatria", 150, diasEHorariosDrSantos);
-        adicionarMedico("Dr. Ferreira", "55555555555", "Ginecologia", 180, diasEHorariosDrFerreira);
+        adicionarMedico("Dr. Ferreira", "55555555555", "Ginecologia", 290, diasEHorariosDrFerreira);
 
         // Instanciando pacientes
         adicionarPaciente("João", "12345678900");
@@ -58,9 +58,9 @@ public class AgendaController implements IAgenda {
         adicionarPaciente("Carlos", "11223344556");
     }
 
-    public static AgendaController getInstance() {
+    public static AgendamentoController getInstance() {
         if (instance == null) {
-            instance = new AgendaController();
+            instance = new AgendamentoController();
         }
         return instance;
     }
@@ -82,9 +82,8 @@ public class AgendaController implements IAgenda {
                 System.out.println("Erro ao parsear a data: " + dia);
             }
         }
-        medicos.add(medico); // Adiciona o médico à lista de médicos
+        medicos.add(medico); 
     }
-
 
     // Método para adicionar pacientes
     public void adicionarPaciente(String nome, String cpf) {
@@ -96,11 +95,16 @@ public class AgendaController implements IAgenda {
     public List<Medico> listarMedicos() {
         return medicos;
     }
-
+    
     // Método para listar pacientes
     public List<Paciente> listarPacientes() {
         return pacientes;
     }
+
+    // Método para listar agendamentos
+    public List<String> listarAgendamentos() {
+        return agendamentos;
+    };
 
     // Método para agendar consulta
     @Override
@@ -121,11 +125,9 @@ public class AgendaController implements IAgenda {
         for (Horario horario : medico.getHorarios()) {
             if (horario.getData().equals(dataEscolhida) && horario.getHora().equals(horarioEscolhido) && !horario.isOcupado()) {
                 medico.marcarHorario(horarioEscolhido, dataEscolhida); // Marca o horário como ocupado
-
-                // Adiciona o agendamento à lista
                 String agendamento = "Consulta agendada para " + nomePaciente + " com " + nomeMedico + " no dia "
                         + new SimpleDateFormat("dd/MM/yyyy").format(dataEscolhida) + " às " + horarioEscolhido + ".";
-                agendamentos.add(agendamento); // Armazena o agendamento
+                agendamentos.add(agendamento); // Adiciona o agendamento à lista
 
                 return agendamento; // Retorna a mensagem de sucesso
             }
@@ -151,7 +153,6 @@ public class AgendaController implements IAgenda {
         for (Horario horario : medico.getHorarios()) {
             if (horario.getData().equals(dataEscolhida) && horario.getHora().equals(horarioEscolhido) && horario.isOcupado()) {
                 horario.setOcupado(false); // Libera o horário
-
                 // Remove o agendamento correspondente da lista de agendamentos
                 String agendamentoRemovido = null;
                 String dataFormatada = new SimpleDateFormat("dd/MM/yyyy").format(dataEscolhida);
@@ -171,11 +172,6 @@ public class AgendaController implements IAgenda {
                         + dataFormatada + " às " + horarioEscolhido + ".";
             }
         }
-
         return "Horário não encontrado ou já está disponível.";
     }
-
-    public List<String> listarAgendamentos() {
-        return agendamentos;
-    };
 }

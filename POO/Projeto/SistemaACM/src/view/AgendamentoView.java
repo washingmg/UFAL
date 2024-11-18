@@ -13,13 +13,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import controller.singleton.AgendaController;
+import controller.singleton.AgendamentoController;
 
-public class AgendaView {
-    private AgendaController controller;
+public class AgendamentoView {
+    private AgendamentoController controller;
     private Scanner scanner;
 
-    public AgendaView(AgendaController controller) {
+    public AgendamentoView(AgendamentoController controller) {
         this.controller = controller;
         this.scanner = new Scanner(System.in);
     }
@@ -109,7 +109,7 @@ public class AgendaView {
         }
     
         // Chama o método do controlador (assumindo que foi modificado para aceitar o mapa)
-        AgendaController.getInstance().adicionarMedico(nomeMedico, cpfMedico, especialidade, valorConsulta, diasEHorarios);
+        AgendamentoController.getInstance().adicionarMedico(nomeMedico, cpfMedico, especialidade, valorConsulta, diasEHorarios);
         System.out.println("Médico adicionado com sucesso!");
     }
     

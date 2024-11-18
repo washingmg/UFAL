@@ -13,7 +13,6 @@ public class Medico extends Pessoa {
 	private List<Horario> horarios;
 	private IEstadoMedico estadoAtual;
 
-	// Construtor
 	public Medico(String nome, String cpf, String especialidade, double valorConsulta) {
 		super(nome, cpf);
 		this.especialidade = especialidade;
@@ -22,7 +21,7 @@ public class Medico extends Pessoa {
 		this.estadoAtual = new EstadoMedicoAtivo(); // Estado inicial
 	}
 
-	// Métodos delegando ao estado
+	// Métodos para marcar horário
 	public void marcarHorario(String horarioEscolhido, Date dataEscolhida) {
 		for (Horario h : horarios) {
 			if (h.getData().equals(dataEscolhida) && h.getHora().equals(horarioEscolhido)) {
@@ -63,7 +62,7 @@ public class Medico extends Pessoa {
 		}
 	}
 
-	// Métodos adicionais
+	// Método para adicionar o horário
 	public void adicionarHorario(Date data, String hora) {
 		Horario horario = new Horario(data, hora, false);
 		horarios.add(horario);

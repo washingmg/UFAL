@@ -35,6 +35,7 @@ public class Horario {
         return "Data: " + data.toString() + " Hora: " + hora;
     }
 
+    // Método para formatação de string
     public String getFormattedDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return sdf.format(data);
