@@ -1,7 +1,7 @@
 # Ciência da Computação - Universidade Federal de Alagoas
    **Conteúdo relativo a programação visto na UFAL**
  
-# Principais conteúdos aprendidos até o 3° período (não concluído)
+       Principais conteúdos aprendidos até o 3° período (não concluído)
 
  # **Matérias envolvendo programação**
 
