@@ -1,25 +1,22 @@
 # Ciência da Computação - Universidade Federal de Alagoas
-   **Conteúdo de programação visto na UFAL**
+   **Conteúdo relativo a programação visto na UFAL**
  
 # Principais conteúdos aprendidos até o 3° período (não concluído)
- 
-    POO - Java
-    
-    Python
-    
-    Estrutura de dados - Python
 
- # **Principais matérias relativas à programação**
+ # **Matérias envolvendo programação**
 
     APC - Algoritmos e programação de computadores
+         Python
 
     ED - Estrutura de Dados
+        Python
 
     POO - Programação Orientada a Objetos
-
-    LAC - Lógia aplicada a Computação
-
-    CSD - Circuitos e Sistemas Digitais
+         Java
 
     ICC - Introdução a Ciência da Computação
+         Python 
+    
+    OAC - Organização e Arquitetura de computadores 
+         Assembly 
     
